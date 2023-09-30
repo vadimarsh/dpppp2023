@@ -1,0 +1,174 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+header{
+    background-color: paleturquoise;
+}
+h1,h2,h3{
+    font-family: Montserrat,sans-serif;
+}
+wbr { display: inline-block; }
+section {
+    font-size: x-large;
+}
+
+.menu{
+    flex-basis: 0;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.menuitem > a{
+
+    font-size: small;
+}
+.menuitem{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    
+}
+.myhead{
+    font-size: x-large;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.myhead>p{
+    flex-grow: 4;
+    flex-basis: 0;
+}
+@media (max-width:500px) {
+    .myhead{
+        flex-direction: column;
+    }    
+}
+
+h1{
+    font-size: xx-large;
+    padding: 15px;
+}
+h2{
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+}
+section{
+    margin-left:40px;
+    margin-right:40px;
+    font-size: large;
+}
+.reviews_block{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.review_card{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    width: 400px;
+    min-height: 300px;
+    margin: 10px;
+
+    background-color: white;
+    box-shadow: 0 0 15px rgb(85, 170, 28);
+    border-radius: 50px 10px 50px;
+    transition: .5s ease-in-out;
+    padding: 15px;
+    font-size: large;
+}
+footer{
+    font-size: large;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.review_card:hover {
+    transform: scale(1.05);
+}
+
+section.actual{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(248, 248, 239);
+}
+section.actual > p {
+    font-size: x-large;
+    width: 100%;
+    padding-left: 5%; 
+    justify-items: stretch;
+}
+section.actual > p:nth-child(2n+1){
+    font-size: large;
+    background-color: rgb(73, 240, 184);   
+    padding-right: 10%;   
+    padding-left: 20%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.photo {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    width: 75px;
+    height: 75px;
+    
+    border-radius: 50%;
+    background: url("https://www.istu.edu/upload/iblock/195/Arshinskiy_V.L..JPG") center no-repeat;
+    background-size: cover;
+}
+
+@media (max-width:500px) {
+    .review_card{
+        font-size: small;
+        min-height: 200px;
+    }    
+}  
+aside{
+    min-height: 110px;
+    background-color: rgb(73, 240, 184);
+}
+.pulse {
+    overflow: visible;
+    position: relative;
+  }
+  .pulse:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: inherit;
+    border-radius: inherit;
+    transition: opacity .3s, transform .3s;
+    animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+      z-index: -1;
+  }
+  @keyframes pulse-animation {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0;
+      transform: scale(1.5);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.5);
+    }
+  }
+      
